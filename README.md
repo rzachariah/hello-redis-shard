@@ -12,16 +12,17 @@ This will start 4 local redis instances, and a python redis client. The client w
 
 redis-shard also supports a hash_tag feature, which enables us to send keys with a common substring to the same node.
 
-However, redis-shard does not support the scan operation.
-
 ```
 client_1  | redis1
 client_1  | redis1
 client_1  | redis1
 client_1  | redis1
 client_1  | redis1
-client_1  | b'1'
-client_1  | b'3'
+```
+
+However, redis-shard does not support the scan operation.
+
+```
 client_1  | Traceback (most recent call last):
 client_1  |   File "/usr/src/app/./app.py", line 42, in <module>
 client_1  |     for key in r.scan_iter(match='ock'):
