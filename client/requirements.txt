@@ -1,0 +1,1 @@
+redis-shard==0.3.7
